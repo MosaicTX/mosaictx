@@ -1,4 +1,0 @@
-# Redirects from what the browser requests to what we serve
-/                 https://mosaictx-website.netlify.app
-/admin            https://mosaictx-website.netlify.app/admin
-/privacy-policy   https://mosaictx-website.netlify.app/privacy-policy
