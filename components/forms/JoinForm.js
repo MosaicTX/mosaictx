@@ -18,6 +18,16 @@ const upDateLabel = (e) => {
     label.innerHTML = labelVal;
 }
 
+function encode(data) {
+  const formData = new FormData();
+
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key]);
+  }
+
+  return formData;
+}
+
 export const JoinForm = (props) => {
   return (
     <Popup popupname="joinForm">
@@ -28,7 +38,7 @@ export const JoinForm = (props) => {
           </h1>
           <p style={{ flexBasis: '60%', margin: '0'}}>Join our team and harness your skills to make a meaningful impact on the well-being of cancer patients. If you're motivated by the opportunity to transform lives through groundbreaking innovation, we'd love to connect with you.</p>
         </div>
-        <form name="join" method="POST" data-netlify="true">
+        <form name="join" method="POST" data-netlify="true" enctype="multipart/form-data">
           <input type="hidden" name="form-name" value="join" />
           <div className={styles.joinForm__field__row}>
             <input type="text" name="name" placeholder='Name' />
