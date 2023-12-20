@@ -28,7 +28,7 @@ export const JoinForm = (props) => {
           </h1>
           <p style={{ flexBasis: '60%', margin: '0'}}>Join our team and harness your skills to make a meaningful impact on the well-being of cancer patients. If you're motivated by the opportunity to transform lives through groundbreaking innovation, we'd love to connect with you.</p>
         </div>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="join" method="POST" data-netlify="true">
           <div className={styles.joinForm__field__row}>
             <input type="text" name="name" placeholder='Name' />
             <input type="email" name="email" placeholder='Email' required/>
