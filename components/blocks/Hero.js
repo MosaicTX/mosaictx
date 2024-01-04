@@ -39,6 +39,7 @@ export const Hero = (props) => {
               src = {videoURL || ''}
               width="780"
               height="885"
+              preload={'metadata'}
               autoPlay
               loop
               muted
