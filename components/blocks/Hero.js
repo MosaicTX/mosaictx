@@ -17,6 +17,9 @@ export const Hero = (props) => {
     gravity: 'center',
     dpr: 'auto'
   });
+  
+  const posterURL = props.data.heroVideo.replace('/upload/', '/upload/so_0/').replace('.mp4', '.jpg');
+  
 
   return (
     <div className={styles.hero} id={props.data.anchor}>
@@ -40,11 +43,11 @@ export const Hero = (props) => {
               width="780"
               height="885"
               preload={'metadata'}
+              poster={posterURL || ''}
               autoPlay
               loop
               muted
               style={{objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%' }}
-              onPlay={(e) => {e.target.style.opacity = 1}}
             />
           </div>
         </div>

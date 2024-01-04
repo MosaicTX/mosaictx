@@ -16,7 +16,7 @@
     height: 100%;
   }
   .hero__video video {
-    opacity: 0;
+    opacity: 1;
     transition: opacity .5s linear;
   }
   .hero__text {
@@ -79,7 +79,7 @@
     height: calc(100vh - var(--fontsize-20) * 3 - 1px);
   }
   .hero__video video {
-    opacity: 0;
+    opacity: 1;
     transition: opacity .5s linear;
   }
   .hero__text {
