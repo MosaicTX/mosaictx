@@ -12,6 +12,10 @@ export const People = (props) => {
     touchMoveHandler(slider);
   })
 
+  const hasAdvisors = props.data.teamProfile.some(person => person.department === 'advisors');
+  const hasLeadership = props.data.teamProfile.some(person => person.department === 'leadership');
+  const hasBoard = props.data.teamProfile.some(person => person.department === 'board');
+
   return(
     <section className={styles.people} id={props.data.anchor}>
       <div className={styles.people__header}>
@@ -38,9 +42,9 @@ export const People = (props) => {
         
       >
         <div className={styles.people__slider__filter}>
-          <button data-filter="leadership" onClick={filterSlides}>Leadership</button>
-          <button data-filter="board" onClick={filterSlides}>Board</button>
-          <button data-filter="advisors" onClick={filterSlides}>Advisors</button>
+          { hasLeadership && <button data-filter="leadership" onClick={filterSlides}>Leadership</button> }
+          { hasBoard && <button data-filter="board" onClick={filterSlides}>Board</button> }
+          { hasAdvisors && <button data-filter="advisors" onClick={filterSlides}>Advisors</button> }
         </div>
         <div 
           className={`${styles.people__slider__rail} rail`} 
