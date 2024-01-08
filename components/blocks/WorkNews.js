@@ -43,11 +43,13 @@ export const WorkNews = (props) => {
                 <h3 className={styles.work__news__title} data-tina-field={tinaField(news[i], 'title')}>
                   {item.title}
                 </h3>
-                <a className={styles.work__news__link} href={item.link}>Read it <span className={styles.arrowspan}>
-                  <svg className={styles.arrow} width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.58871 1.84035L6.58871 0.840352L11.2287 5.48035V7.26035L6.58871 11.9204L5.56871 10.9004L9.42871 7.06035H0.288711V5.66035H9.44871L5.58871 1.84035Z" fill="#101313"/>
-                  </svg>
-                </span> </a>
+                { item.link && (
+                  <a className={styles.work__news__link} href={item.link}>Read it <span className={styles.arrowspan}>
+                    <svg className={styles.arrow} width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.58871 1.84035L6.58871 0.840352L11.2287 5.48035V7.26035L6.58871 11.9204L5.56871 10.9004L9.42871 7.06035H0.288711V5.66035H9.44871L5.58871 1.84035Z" fill="#101313"/>
+                    </svg>
+                  </span> </a>
+                )}
                 <p className={styles.work__news__item__meta}>
                   <span className={styles.work__news__item__meta__cat}>{item.category}</span>
                   <span className={styles.work__news__item__meta__date}>{formattedDates[i]}</span>
