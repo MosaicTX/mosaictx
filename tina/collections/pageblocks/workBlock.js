@@ -172,6 +172,11 @@ export const workBlock = {
       type: 'object',
       fields: [
         {
+          name: 'displayNews',
+          label: 'Display the news section? (untick to hide)',
+          type: 'boolean',
+        },
+        {
           name: 'anchor',
           label: 'Anchor Link',
           type: 'string',

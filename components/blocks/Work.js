@@ -136,22 +136,23 @@ export const Work = (props) => {
             />
           </figure>
       </div>
-      <div className={styles.work__news}>
-        <div className={styles.work__news__header}>
-          <h2 className={styles.work__news__header__title} 
-              data-tina-field={tinaField(work.news, 'title')}
-          >
-            {work.news?.title}
-          </h2>
-          <div className={styles.work__news__header__text} data-tina-field={tinaField(work.news, 'body')}>
-            <TinaMarkdown content={work.news?.body} />
+      { work.news.displayNews && (
+        <div className={styles.work__news}>
+          <div className={styles.work__news__header}>
+            <h2 className={styles.work__news__header__title} 
+                data-tina-field={tinaField(work.news, 'title')}
+            >
+              {work.news?.title}
+            </h2>
+            <div className={styles.work__news__header__text} data-tina-field={tinaField(work.news, 'body')}>
+              <TinaMarkdown content={work.news?.body} />
+            </div>
           </div>
+          <section id={ work.news?.anchor ? work.news.anchor : 'news'} data-slider >
+            <WorkNews data={work.news?.newsItems} />
+          </section>
         </div>
-        <section id={ work.news?.anchor ? work.news.anchor : 'news'} data-slider >
-          <WorkNews data={work.news?.newsItems} />
-        </section>
-
-      </div>
+        )}
     </section>
   )
 }

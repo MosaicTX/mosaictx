@@ -1,6 +1,6 @@
 @media screen and (max-width: 639.9px) {
   .work__newsWrapper {
-    --grid: repeat(10, 9.5svh) / repeat(14, 1fr);
+    --grid: repeat(10, 1fr) / repeat(14, 1fr);
     position: relative;
     display: grid;
     grid: var(--grid);
@@ -75,7 +75,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     align-self: flex-end;
   }
@@ -89,7 +89,7 @@
   .work__news__title {
     margin-top: 0;
     font-size: var(--fontsize-30);
-    height: 5.4em;
+    /* min-height: 5.4em; */
     position: relative;
   }
   .work__news__link {
@@ -215,7 +215,7 @@
   .work__news__title {
     margin-top: 0;
     font-size: var(--fontsize-30);
-    height: 5.4em;
+    /* height: 5.4em; */
     position: relative;
   }
   .work__news__link {

@@ -20,9 +20,7 @@ export const WorkNews = (props) => {
 
   return (
     <div className={styles.work__newsWrapper}>
-      <div 
-        className={styles.work__newsItems} 
-      >
+      <div className={styles.work__newsItems}>
         {news?.map((item, i) => (
           <div 
             className={`${styles.work__news__item} work__news__item`} 
